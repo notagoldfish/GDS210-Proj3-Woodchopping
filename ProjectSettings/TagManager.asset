@@ -8,6 +8,7 @@ TagManager:
   - FxTemporaire
   - Fire
   - Woodchops
+  - WoodDump
   layers:
   - Default
   - TransparentFX
