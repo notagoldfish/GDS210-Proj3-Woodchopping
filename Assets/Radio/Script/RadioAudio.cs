@@ -10,7 +10,6 @@ public class RadioAudio : MonoBehaviour
     AudioSource source;
     TunerChanger tC;
     RadioVolume rVolume;
-    InteractableHoverEvents iHE;
     public int songID;
 
     private void Awake()
@@ -18,38 +17,19 @@ public class RadioAudio : MonoBehaviour
         source = this.gameObject.GetComponent<AudioSource>();
         tC = GetComponentInChildren<TunerChanger>();
         rVolume = GetComponentInChildren<RadioVolume>();
-        iHE = GetComponentInChildren<InteractableHoverEvents>();
     }
 
     private void Start()
     {
         source.PlayOneShot(radioSongs[0]);
-        source.volume = 1f;
+        source.volume = 1;
     }
 
     void Update()
     {
         songID = tC.SongID;
         source.clip = radioSongs[songID];
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            source.Stop();
-            source.PlayOneShot(radioSongs[songID]);
-            Debug.Log(radioSongs[songID]);
-        }
-
+        source.PlayOneShot(radioSongs[songID]);
         source.volume = rVolume.songVolume;
-    }
-
-    public void Mute()
-    {
-        if(source.volume != 0)
-        {
-            source.volume = rVolume.songVolume;
-        }
-        else
-        {
-            source.volume = 0;
-        }
     }
 }

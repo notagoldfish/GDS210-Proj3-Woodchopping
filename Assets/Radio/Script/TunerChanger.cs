@@ -16,7 +16,7 @@ public class TunerChanger : MonoBehaviour
         rA = GetComponentInParent<RadioAudio>();
         cD = this.gameObject.GetComponent<CircularDrive>();
 
-        cD.maxAngle = rA.radioSongs.Length * 10;
+        cD.maxAngle = rA.radioSongs.Length * 10 - 10;
     }
 
     // Update is called once per frame
