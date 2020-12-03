@@ -41,6 +41,7 @@ namespace BzKovSoft.ObjectSlicer.Samples
 			Slice(plane, callBack);
 
             gameObject.tag = "Woodchops";
+			CountdownController.gameStart = true;
 		}
 
 		protected override BzSliceTryData PrepareData(Plane plane)
