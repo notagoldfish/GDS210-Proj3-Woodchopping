@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.studio1campwoodchopping.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\anguyen161\\Documents\\GitHub\\GDS210-Proj3-Woodchopping\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Studio 1 Camp - Woodchopping [Testing]"
+        }
+      }
+    }
+  ]
+}
