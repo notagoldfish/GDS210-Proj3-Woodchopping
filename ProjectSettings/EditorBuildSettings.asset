@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Radio/Radio.unity
+    guid: 0626784a512f6a642b4cfe228d44fd1d
   m_configObjects: {}
