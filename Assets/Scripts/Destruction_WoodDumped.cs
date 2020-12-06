@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WoodDumped : MonoBehaviour
+public class Destruction_WoodDumped : MonoBehaviour
 {
 
-    public WoodScore scoreBoard;
+    public Destruction_WoodScore scoreBoard;
     public int scoreIncrease;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Woodchops"))
         {
-            var woodScored = other.GetComponent<WoodScored>();
+            var woodScored = other.GetComponent<Destruction_WoodScored>();
             if (woodScored.addedScore == false)
             {
                 scoreBoard.AddScore(scoreIncrease);

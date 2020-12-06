@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class CountdownController : MonoBehaviour
+public class Destruction_CountdownController : MonoBehaviour
 {
 
     public int countdownTime;
     public TMP_Text countdownDisplay;
     public TMP_Text timeRemainingText;
-    public WoodDumped woodDumped;
+    public Destruction_WoodDumped woodDumped;
     [Range(0.0f, 2.0f)]
     public float flickerTime;
 
@@ -50,6 +50,7 @@ public class CountdownController : MonoBehaviour
 
         woodDumped.scoreIncrease = 0;
 
+        //Flash when done (I know theres a forloop I could do but I didnt
         yield return new WaitForSeconds(flickerTime);
         countdownDisplay.gameObject.SetActive(false);
         yield return new WaitForSeconds(flickerTime);

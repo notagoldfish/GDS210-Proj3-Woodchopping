@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace BzKovSoft.ObjectSlicer.Samples
 {
-    public class WoodSlicer : BzSliceableObjectBase, IBzSliceableNoRepeat
+    public class Destruction_WoodSlicer : BzSliceableObjectBase, IBzSliceableNoRepeat
 	{
 		[HideInInspector]
 		[SerializeField]
@@ -41,7 +41,7 @@ namespace BzKovSoft.ObjectSlicer.Samples
 			Slice(plane, callBack);
 
             gameObject.tag = "Woodchops";
-			CountdownController.gameStart = true;
+            Destruction_CountdownController.gameStart = true;
 		}
 
 		protected override BzSliceTryData PrepareData(Plane plane)

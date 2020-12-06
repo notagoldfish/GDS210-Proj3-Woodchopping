@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BzKovSoft.ObjectSlicer;
 
-public class SlicerController : MonoBehaviour
+public class Destruction_SlicerController : MonoBehaviour
 {
 
     public GameObject _target;

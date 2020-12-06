@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class WoodScore : MonoBehaviour
+public class Destruction_WoodScore : MonoBehaviour
 {
 
     public TMP_Text scoreText;
