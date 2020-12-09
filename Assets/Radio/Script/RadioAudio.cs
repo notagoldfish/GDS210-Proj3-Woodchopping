@@ -10,26 +10,50 @@ public class RadioAudio : MonoBehaviour
     AudioSource source;
     TunerChanger tC;
     RadioVolume rVolume;
+    RadioMute muted;
     public int songID;
+
+    [SerializeField] bool isPlaying;
+    public bool togChange;
+    [SerializeField] float timer = 1;
 
     private void Awake()
     {
         source = this.gameObject.GetComponent<AudioSource>();
         tC = GetComponentInChildren<TunerChanger>();
         rVolume = GetComponentInChildren<RadioVolume>();
+        muted = GetComponentInChildren<RadioMute>();
     }
 
     private void Start()
     {
-        source.PlayOneShot(radioSongs[0]);
-        source.volume = 1;
+        isPlaying = true;
+        togChange = true;
     }
 
     void Update()
     {
         songID = tC.SongID;
-        source.clip = radioSongs[songID];
-        source.PlayOneShot(radioSongs[songID]);
-        source.volume = rVolume.songVolume;
+
+        if(isPlaying == true && togChange == true)
+        {
+            source.PlayOneShot(radioSongs[songID]);
+            togChange = false;
+            isPlaying = false;
+        }
+
+        if (isPlaying == false && togChange == true)
+        {
+            //AudioSource.Stop() is not working properly - Check at later date.
+            source.Stop();
+            StartCoroutine(Wait());
+        }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(timer);
+        isPlaying = true;
+        Debug.Log("Wait for " + timer + " seconds");
     }
 }

@@ -10,6 +10,8 @@ public class TunerChanger : MonoBehaviour
     
     public int SongID = 0;
 
+    private float currentID;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +26,13 @@ public class TunerChanger : MonoBehaviour
     {
         SongID = (int)cD.outAngle;
         SongID = SongID / 10;
+
+        if (currentID != SongID)
+        {
+            rA.togChange = true;
+
+        }
+
+        currentID = SongID;
     }
 }

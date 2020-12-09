@@ -5,17 +5,17 @@ using Valve.VR.InteractionSystem;
 
 public class RadioMute : MonoBehaviour
 {
-    private CircularDrive cD;
-    private RadioVolume rV;
-    private GameObject radio;
+    CircularDrive cD;
+    RadioVolume rV;
+    AudioSource radioVolume;
 
-    [SerializeField] bool isMuted;
+    public bool isMuted;
 
     private void Awake()
     {
         cD = this.gameObject.GetComponent<CircularDrive>();
         rV = GetComponentInParent<RadioVolume>();
-        radio = GameObject.Find("Radio");
+        radioVolume = GetComponentInParent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -30,11 +30,11 @@ public class RadioMute : MonoBehaviour
     {
         if (isMuted == true)
         {
-            radio.GetComponent<AudioSource>().volume = 0;
+            radioVolume.volume = 0f;
         }
         else
         {
-            radio.GetComponent<AudioSource>().volume = rV.songVolume;
+            radioVolume.volume = 1f;
         }
     }
 

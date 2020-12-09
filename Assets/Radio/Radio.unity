@@ -234,12 +234,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radioSongs:
-  - {fileID: 8300000, guid: d654690504ef85a46a848d79c222a859, type: 3}
+  - {fileID: 8300000, guid: 74068c08db651d34f81de9affa61f55d, type: 3}
   - {fileID: 8300000, guid: 859d9a5fabb0a3840b72413ee960fb88, type: 3}
-  - {fileID: 8300000, guid: d1ac878cd631fdc4a92736fcc5aeeff4, type: 3}
+  - {fileID: 8300000, guid: bb185b9d56707b64d8cd03434503252d, type: 3}
   - {fileID: 8300000, guid: a61624d7b2414434e892a2d00d9d767c, type: 3}
   - {fileID: 8300000, guid: 8dfad630e1ec3d843b5b5c0c33542835, type: 3}
-  songID: 0
+  songID: 1
+  isPlaying: 0
+  togChange: 0
+  timer: 1
 --- !u!82 &376549725
 AudioSource:
   m_ObjectHideFlags: 0
@@ -477,7 +480,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638778295}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.0002
   m_Height: 0.001
@@ -660,7 +663,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834550259}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.0002
   m_Height: 0.001
@@ -875,7 +878,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197424851}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.0002
   m_Height: 0.001
