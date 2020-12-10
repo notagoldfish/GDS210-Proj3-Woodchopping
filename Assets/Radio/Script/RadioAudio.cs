@@ -44,7 +44,7 @@ public class RadioAudio : MonoBehaviour
 
         if (isPlaying == false && togChange == true)
         {
-            //AudioSource.Stop() is not working properly - Check at later date.
+            source = this.gameObject.GetComponent<AudioSource>();
             source.Stop();
             StartCoroutine(Wait());
         }
